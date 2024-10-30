@@ -1,3 +1,8 @@
+build/examples
+node_modules/
+examples/
+h5p/
+test/
 .github/
 .vscode/
 .editorconfig
@@ -10,7 +15,6 @@ __tests__
 src/
 scripts/
 assets/
-assets/**
 .circleci/
 release.config.js
 renovate.json
