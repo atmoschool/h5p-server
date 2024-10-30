@@ -7,3 +7,4 @@ jest.*.js
 __tests__
 scripts/
 tsconfig*.json
+test/

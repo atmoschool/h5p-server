@@ -4,8 +4,5 @@
     "compilerOptions": {
         "declaration": true,
         "outDir": "./build"
-    },
-    "files": [
-        "build"
-    ]
+    }
 }
