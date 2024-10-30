@@ -3,6 +3,9 @@
     "version": "9.3.2",
     "description": "A community re-implementation of the H5P server",
     "license": "GPL-3.0-or-later",
+    "publishConfig": {
+        "access": "public"
+    },
     "repository": {
         "type": "git",
         "url": "https://github.com/atmoschool/h5p-server"
