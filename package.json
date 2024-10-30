@@ -1,6 +1,6 @@
 {
     "name": "@atmoschool/h5p-server",
-    "version": "9.3.4",
+    "version": "9.3.5",
     "description": "A community re-implementation of the H5P server",
     "license": "GPL-3.0-or-later",
     "publishConfig": {
@@ -12,7 +12,7 @@
     },
     "scripts": {
         "build:watch": "npx tsc -w -p ./tsconfig.build.json",
-        "build": "sh build.sh",
+        "build": "tsc",
         "prepublishOnly": "npm run build",
         "clean": "rm -rf h5p && rm -rf build && rm -rf coverage && rm -rf node_modules",
         "test:coverage": "npx jest --config jest.coverage.config.js --collect-coverage --testTimeout=120000",
