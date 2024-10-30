@@ -1,6 +1,6 @@
 {
     "name": "@atmoschool/h5p-server",
-    "version": "9.3.3",
+    "version": "9.3.4",
     "description": "A community re-implementation of the H5P server",
     "license": "GPL-3.0-or-later",
     "publishConfig": {
@@ -8,7 +8,7 @@
     },
     "repository": {
         "type": "git",
-        "url": "https://github.com/atmoschool/h5p-server"
+        "url": "git+https://github.com/atmoschool/h5p-server.git"
     },
     "scripts": {
         "build:watch": "npx tsc -w -p ./tsconfig.build.json",
@@ -21,7 +21,7 @@
         "test": "jest --logHeapUsage --maxWorkers=${BUILD_WORKERS-`nproc`}"
     },
     "release": {
-        "branch": "master"
+        "branch": "main"
     },
     "contributors": [
         {
