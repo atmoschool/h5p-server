@@ -1,6 +1,6 @@
 {
     "name": "@atmoschool/h5p-server",
-    "version": "9.3.15",
+    "version": "9.3.16",
     "description": "A community re-implementation of the H5P server",
     "license": "GPL-3.0-or-later",
     "publishConfig": {
@@ -24,6 +24,9 @@
     "release": {
         "branch": "main"
     },
+    "files": [
+        "build"
+    ],
     "contributors": [
         {
             "name": "Sebastian Rettig",
