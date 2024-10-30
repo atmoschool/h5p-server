@@ -1,7 +1,5 @@
-src/
 node_modules/
 tsconfig.build.json
-assets/
 .github/
 jest.*.js
 __tests__
