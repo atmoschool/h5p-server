@@ -1,4 +1,3 @@
-build/examples
 node_modules/
 examples/
 h5p/
@@ -14,7 +13,6 @@ __tests__
 .env
 src/
 scripts/
-assets/
 .circleci/
 release.config.js
 renovate.json
