@@ -1,6 +1,6 @@
 {
     "name": "@atmoschool/h5p-server",
-    "version": "9.3.5",
+    "version": "9.3.6",
     "description": "A community re-implementation of the H5P server",
     "license": "GPL-3.0-or-later",
     "publishConfig": {
@@ -12,7 +12,7 @@
     },
     "scripts": {
         "build:watch": "npx tsc -w -p ./tsconfig.build.json",
-        "build": "tsc",
+        "build": "sh build.sh",
         "prepublishOnly": "npm run build",
         "clean": "rm -rf h5p && rm -rf build && rm -rf coverage && rm -rf node_modules",
         "test:coverage": "npx jest --config jest.coverage.config.js --collect-coverage --testTimeout=120000",
@@ -75,6 +75,7 @@
         "yazl": "^2.5.1"
     },
     "devDependencies": {
+        "@commitlint/config-conventional": "17.8.1",
         "@types/async-lock": "1.4.2",
         "@types/fs-extra": "11.0.4",
         "@types/jest": "29.5.13",
@@ -84,13 +85,9 @@
         "@types/stream-buffers": "3.0.7",
         "@types/yauzl-promise": "2.1.5",
         "@types/yazl": "2.4.5",
-        "axios-mock-adapter": "1.22.0",
-        "mockdate": "3.0.5",
-        "promise-parallel-throttle": "3.5.0",
-        "stream-mock": "2.0.5",
-        "@commitlint/config-conventional": "17.8.1",
         "@typescript-eslint/eslint-plugin": "5.62.0",
         "@typescript-eslint/parser": "5.62.0",
+        "axios-mock-adapter": "1.22.0",
         "concurrently": "8.2.2",
         "eslint": "8.57.0",
         "eslint-config-airbnb": "19.0.4",
@@ -106,13 +103,16 @@
         "jest": "29.7.0",
         "json-autotranslate": "1.14.3",
         "lerna": "6.6.2",
+        "mockdate": "3.0.5",
         "prettier": "2.8.8",
+        "promise-parallel-throttle": "3.5.0",
         "remark-cli": "11.0.0",
         "remark-validate-links": "12.1.1",
+        "stream-mock": "2.0.5",
         "ts-jest": "29.2.5",
         "ts-node": "10.9.2",
         "typedoc": "0.26.6",
-        "typescript": "5.5.4"
+        "typescript": "^5.5.4"
     },
     "main": "./build/src/index.js",
     "types": "./build/src/index.d.ts"
