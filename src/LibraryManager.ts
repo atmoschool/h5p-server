@@ -616,14 +616,19 @@ export default class LibraryManager {
                 libraries.map(async (libName) => {
                     const installedLib = InstalledLibrary.fromName(libName);
                     const info = await this.getLibrary(libName);
+                    if (!info) {
+                        log.warn(
+                            `Library ${LibraryName.toUberName(libName)} returned no metadata, skipping.`
+                        );
+                        return null;
+                    }
                     installedLib.patchVersion = info.patchVersion;
                     installedLib.runnable = info.runnable;
                     installedLib.title = info.title;
                     return installedLib;
                 })
             )
-        ).sort((lib1, lib2) => lib1.compareVersions(lib2));
-
+        ).filter(Boolean).sort((lib1, lib2) => lib1.compareVersions(lib2));
         const returnObject = {};
         for (const library of libraries) {
             if (!returnObject[library.machineName]) {
