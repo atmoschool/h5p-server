@@ -120,14 +120,14 @@ export default class FileLibraryStorage implements ILibraryStorage {
         );
 
         const libPath = this.getDirectoryPath(library);
-        if (await fsExtra.pathExists(libPath)) {
-            throw new H5pError(
-                'storage-file-implementations:install-library-already-installed',
-                {
-                    libraryName: LibraryName.toUberName(library)
-                }
-            );
-        }
+        // if (await fsExtra.pathExists(libPath)) {
+        //     throw new H5pError(
+        //         'storage-file-implementations:install-library-already-installed',
+        //         {
+        //             libraryName: LibraryName.toUberName(library)
+        //         }
+        //     );
+        // }
         try {
             await fsExtra.ensureDir(libPath);
             await fsExtra.writeJSON(
